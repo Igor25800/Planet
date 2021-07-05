@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Ім*я</th>
+      <th scope="col">Зріст</th>
+      <th scope="col">Рік народження</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of arrPeople">
+      <td>{{item.name}}</td>
+      <td>{{item.height}}</td>
+      <td>{{item.birth_year}}</td>
+    </tr>
+ 
+  </tbody>
+</table>
+
+

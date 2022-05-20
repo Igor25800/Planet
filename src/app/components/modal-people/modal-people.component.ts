@@ -19,18 +19,19 @@ export class ModalPeopleComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
 
-  
+
   ngOnInit(): void {
     this.getPeople()
   }
 
   getPeople(): void {
     this.data.residents.map(el => {
-      this.people.getPeople(el).subscribe(people =>  {
+      const name = el.split('/');
+      this.people.getPeople(name[5]).subscribe(people =>  {
       this.arrPeople.push(people)
        }
       )
     })
   }
-  
+
 }

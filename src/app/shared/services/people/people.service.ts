@@ -11,14 +11,14 @@ import { map } from 'rxjs/operators';
 export class PeopleService {
 
 
-  
-  
+
+
   constructor(
     private http: HttpClient,
   ) {}
 
   getPeople(id:string): Observable <IPeople> {
-   return  this.http.get<IPeople>(id).pipe( map((data: any) => data )  )
+   return  this.http.get<IPeople>(`/people/${id}`).pipe( map((data: any) => data )  )
 
   }
 

@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class PlanetsService {
 
-  
+
 
   private url: string
   constructor(private http: HttpClient) {
@@ -17,6 +17,6 @@ export class PlanetsService {
    }
 
    getPlanets(): Observable<Array <IDataIPlanet>> {
-    return this.http.get<any>(this.url).pipe( map((data: any) => data.results ) )
+    return this.http.get<any>('/planets').pipe( map((data: any) => data.results ) )
    }
 }

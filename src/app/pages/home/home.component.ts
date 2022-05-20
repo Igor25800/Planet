@@ -41,9 +41,10 @@ export class HomeComponent implements OnInit {
     this.planets.getPlanets().subscribe((planet: any) => {
       this.arrPlanets = planet
     })
-  } 
+  }
 
   openDialog(event: any): void {
+    console.log(event)
     const dialogRef = this.dialog.open(ModalPeopleComponent, {
       width: '50%',
       data:  event
@@ -51,7 +52,7 @@ export class HomeComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      
+
     });
   }
 
